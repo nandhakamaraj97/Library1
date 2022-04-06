@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add Book</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{%static 'Register/css/roboto-font.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'Register/fonts/font-awesome-5/css/fontawesome-all.min.css'%}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{%static 'Register/css/style.css'%}"/>
+</head>
+<body class="form-v5" >
+	<div class="page-content" style="background-color:skyblue;">
+		<div class="form-v5-content">
+			<form class="form-detail" action="#" method="post">
+				{%csrf_token%}
+				<h2>Add a Book</h2>
+				<div class="form-row">
+					<label for="full-name">Book Name</label>
+					<input type="text" name="Book_Name" id="Book_Name" class="input-text" placeholder="Your Name" required>
+
+				</div>
+					<div class="form-row">
+					<label for="full-name">Author Name</label>
+					<input type="text" name="Author_Name" id="Author_Name" class="input-text" placeholder="Author_Name" required>
+
+				</div>
+					<div class="form-row">
+					<label for="full-name">publication</label>
+					<input type="text" name="publication" id="publication" class="input-text" placeholder="publication" required>
+
+				</div>
+				<div class="form-row">
+					<label for="your-email">No of Pages</label>
+						<input type="text" name="No_of_Pages" id="No_of_Pages" class="input-text" placeholder="No of Pages" required>
+
+				</div>
+
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Register">
+				</div>
+				<div class="form-row-first">
+					<a type="submit" name="Home" href="/Open">Back</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

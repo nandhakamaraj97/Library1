@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <title>Education Hub An Education Category Flat Bootstrap Responsive Website Template| Home :: W3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Education Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+
+	<link rel="stylesheet" type="text/css" href="{%static 'Register/css/roboto-font.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'Register/fonts/font-awesome-5/css/fontawesome-all.min.css'%}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{%static 'Register/css/style.css'%}"/>
+
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link href="{%static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all">
+    <link href="{%static 'css/bootstrap.min.css'%}" rel="stylesheet" type="text/css" media="all">
+    <link href="{%static 'css/font-awesome.min.css'%}" rel="stylesheet" type="text/css" media="all">
+    <!-- //css files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=latin-ext,vietnamese"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900iSource+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="{%static 'js/jquery-2.1.4.min.js'%}"></script>
+    <!-- //js -->
+    <script type="text/javascript" src="{%static 'js/bootstrap-3.1.1.min.js'%}"></script>
+
+    <script src="{%static 'js/jquery.chocolat.js'%}"></script>
+    <link rel="stylesheet" href="{%static 'css/chocolat.css'%}" type="text/css" media="screen">
+    <!--light-box-files -->
+    <script>
+		$(function() {
+			$('.gallery-grid a').Chocolat();
+		});
+
+    </script>
+
+    <!-- //js -->
+    <script src="{%static 'js/responsiveslides.min.js'%}"></script>
+    <script>
+				$(function () {
+					$("#slider").responsiveSlides({
+						auto: true,
+						pager:false,
+						nav: true,
+						speed: 1000,
+						namespace: "callbacks",
+						before: function () {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+				});
+
+    </script>
+
+
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="{%static 'js/move-top.js'%}"></script>
+    <script type="text/javascript" src="{%static 'js/easing.js'%}"></script>
+    <script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+
+    </script>
+    <!-- start-smoth-scrolling -->
+
+<style>
+  body{
+     background-image: url("{% static 'images/bg1.jpg'%}");
+     }
+</style>
+</head>
+<body >
+<div class="header" id="home">
+    <div class="logo">
+        <a href="#"><h1>Library</h1></a>
+    </div>
+    <!-- navigation -->
+    <div class="ban-top-con">
+        <div class="top_nav_left">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav menu__list">
+
+                            <li><a class=" btn-success " href="/Open">Home</a></li>
+                            <li><a  href="/Add_Book">Add a Book</a></li>
+                            <li><a class=" btn-success " href="/Update_Book">Update</a></li>
+                            <li><a class=" btn-success " href="/Delete_Book">Delete</a></li>
+                            <li><a class=" btn-success " href="/View_Book">View Books</a></li>
+                            <li><a class=" btn-primary " href="/Admin_Logout">Logout</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+    <!-- //navigation -->
+    <!-- Slider -->
+    <center>
+	<div class="form-v5-content">
+			<form class="form-detail" action="#" method="post">
+				{%csrf_token%}
+				<h2>Add a Book</h2>
+				<div class="form-row">
+					<label for="full-name">Book Name</label>
+					<input type="text" name="Book_Name" id="Book_Name" class="input-text" placeholder="Your Name" required>
+
+				</div>
+					<div class="form-row">
+					<label for="full-name">Author Name</label>
+					<input type="text" name="Author_Name" id="Author_Name" class="input-text" placeholder="Author_Name" required>
+
+				</div>
+					<div class="form-row">
+					<label for="full-name">publication</label>
+					<input type="text" name="publication" id="publication" class="input-text" placeholder="publication" required>
+
+				</div>
+				<div class="form-row">
+					<label for="your-email">No of Pages</label>
+						<input type="text" name="No_of_Pages" id="No_of_Pages" class="input-text" placeholder="No of Pages" required>
+
+				</div>
+
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Register">
+				</div>
+
+			</form>
+		</div>
+</center>
+    <!-- //Slider -->
+</div>
+
+
+
+<!-- //smooth scrolling -->
+</body>
+</html>
